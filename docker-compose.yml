@@ -1,5 +1,11 @@
 version: "2"
 services:
+  nginx:
+    build: nginx
+    ports:
+      - "80:80"
+    environment:
+      REVERSE_PROXY_DOMAIN_NAME: ${REVERSE_PROXY_DOMAIN_NAME}
   postgres:
     image: postgres
     restart: always
@@ -14,6 +20,22 @@ services:
     restart: always
     ports:
       - 8888:8080
+  gitlabce:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://gitlab.example.com'
+        # Add any other gitlab.rb configuration here, each on its own line
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '/srv/gitlab/config:/etc/gitlab'
+      - '/srv/gitlab/logs:/var/log/gitlab'
+      - '/srv/gitlab/data:/var/opt/gitlab'
   mattermost:
     image: mattermost/mattermost-prod-app:3.9.0
     environment:
