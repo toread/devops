@@ -5,6 +5,7 @@ services:
     restart: always
     volumes:
       - postgres-data:/var/lib/postgresql/data
+      - ./docker-entrypoint-initdb.d/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
     environment:
       POSTGRES_USER:  postgres
       POSTGRES_PASSWORD: toread
