@@ -21,9 +21,8 @@ services:
       MM_USERNAME:  mattermost
       MM_PASSWORD:  mattermost
       MM_DBNAME: mattermost
-      APP_PORT_NUMBER: 9090
     ports:
-      - 9090:9090
+      - 80:9090
     volumes:
       - mattermost-data:/mattermost/data
       - mattermost-config:/mattermost/config
