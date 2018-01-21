@@ -22,7 +22,7 @@ services:
       MM_PASSWORD:  mattermost
       MM_DBNAME: mattermost
     ports:
-      - 9090:80
+      - 80:9090
     volumes:
       - mattermost-data:/mattermost/data
       - mattermost-config:/mattermost/config
