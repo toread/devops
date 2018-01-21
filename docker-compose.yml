@@ -17,7 +17,7 @@ services:
     image: mattermost/mattermost-prod-app:3.9.0
     environment:
       MATTERMOST_ENABLE_SSL: "true"
-      DB_HOST: ${DATABASE_HOST}
+      DB_HOST: postgres
       DB_PORT_NUMBER:
       MM_USERNAME:  mattermost
       MM_PASSWORD:  mattermost
