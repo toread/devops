@@ -18,7 +18,6 @@ services:
     environment:
       MATTERMOST_ENABLE_SSL: "true"
       DB_HOST: postgres
-      DB_PORT_NUMBER:
       MM_USERNAME:  mattermost
       MM_PASSWORD:  mattermost
       MM_DBNAME: mattermost
