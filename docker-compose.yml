@@ -27,10 +27,10 @@ services:
   gitlabce:
     image: 'gitlab/gitlab-ce:latest'
     restart: always
-    hostname: 'gitlab.example.com'
+    hostname: 'gitlab.devops.com'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://gitlab.example.com'
+        external_url 'https://gitlab.devops.com'
         # 阿里云服务器推送处理
         gitlab_rails['gitlab_email_from'] = 'gitlab@devpt.ltd'
         gitlab_rails['smtp_enable'] = true
