@@ -93,12 +93,18 @@ services:
 #        hard: 65536
 
 volumes:
+  redis-config:
+    driver: local
+  redis-logs:
+    driver: local
+  redis-data:
+    driver: local
   redis-data:
     driver: local
   postgres-data:
     driver: local
-  mattermost-data:
-    driver: local
+#  mattermost-data:
+#    driver: local
 #  mattermost-config:
 #    driver: local
 #  owncloud-data:
