@@ -31,9 +31,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://gitlab.devops.com'
-        #ssh配置
         gitlab_rails['gitlab_shell_ssh_port'] = 2280
-        # 阿里云服务器推送处理
         gitlab_rails['gitlab_email_from'] = 'gitlab@devpt.ltd'
         gitlab_rails['smtp_enable'] = true
         gitlab_rails['smtp_address'] = "smtp.devpt.ltd"
@@ -42,7 +40,6 @@ services:
         gitlab_rails['smtp_password'] = "Qeer1234"
         gitlab_rails['smtp_domain'] = "devpt.ltd"
         gitlab_rails['smtp_authentication'] = "login"
-        #配置数据
         gitlab_rails['db_adapter'] = "postgresql"
         gitlab_rails['db_encoding'] = "unicode"
         gitlab_rails['db_collation'] = nil
@@ -54,7 +51,6 @@ services:
         gitlab_rails['db_port'] = 5432
         gitlab_rails['db_prepared_statements'] = true
         gitlab_rails['db_statements_limit'] = 1000
-        #redis配置
         gitlab_rails['redis_host'] = "redis"
         gitlab_rails['redis_port'] = 6379
         gitlab_rails['redis_password'] = nil
