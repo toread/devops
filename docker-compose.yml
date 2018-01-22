@@ -93,11 +93,11 @@ services:
 #        hard: 65536
 
 volumes:
-  redis-config:
+  gitlab-config:
     driver: local
-  redis-logs:
+  gitlab-logs:
     driver: local
-  redis-data:
+  gitlab-data:
     driver: local
   redis-data:
     driver: local
