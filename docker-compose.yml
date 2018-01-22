@@ -77,15 +77,15 @@ services:
 
     - SMTP_ENABLED=true
     - SMTP_DOMAIN=smtp.devpt.ltd
-    - SMTP_HOST=smtp.gmail.com
-    - SMTP_PORT=587
+    - SMTP_HOST=smtp.devpt.ltd
+    - SMTP_PORT=25
     - SMTP_USER=gitlab@devpt.ltd
     - SMTP_PASS=Qeer1234
     - SMTP_STARTTLS=true
     - SMTP_AUTHENTICATION=login
 
     - IMAP_ENABLED=true
-    - IMAP_HOST=imap.mxhichina.com
+    - IMAP_HOST=imap.devpt.ltd
     - IMAP_PORT=993
     - IMAP_USER=gitlab@devpt.ltd
     - IMAP_PASS=Qeer1234
