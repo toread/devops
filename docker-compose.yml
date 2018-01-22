@@ -29,7 +29,7 @@ services:
     image: sameersbn/gitlab:10.3.5
     depends_on:
     - redis
-    - postgresql
+    - postgres
     ports:
     - "10080:80"
     - "10022:22"
@@ -39,7 +39,7 @@ services:
     - DEBUG=false
 
     - DB_ADAPTER=postgresql
-    - DB_HOST=postgresql
+    - DB_HOST=postgres
     - DB_PORT=5432
     - DB_USER=gitlab
     - DB_PASS=gitlab
