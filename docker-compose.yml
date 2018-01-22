@@ -52,7 +52,7 @@ services:
     - GITLAB_TIMEZONE=Shanghai
 
     - GITLAB_HTTPS=false
-    - SSL_SELF_SIGNED=false
+    - SSL_SELF_SIGNED=true
 
     - GITLAB_HOST=localhost
     - GITLAB_PORT=10080
