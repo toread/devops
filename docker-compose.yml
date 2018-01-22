@@ -60,23 +60,22 @@ services:
       - '443:443'
       - '2280:2280'
     volumes:
-      - '/srv/gitlab/config:/etc/gitlab'
-      - '/srv/gitlab/logs:/var/log/gitlab'
-      - '/srv/gitlab/data:/var/opt/gitlab'
-
-  mattermost:
-    image: mattermost/mattermost-prod-app:3.9.0
-    environment:
-      MATTERMOST_ENABLE_SSL: "true"
-      DB_HOST: postgres
-      MM_USERNAME:  mattermost
-      MM_PASSWORD:  mattermost
-      MM_DBNAME: mattermost
-    ports:
-      - 9999:80
-    volumes:
-      - mattermost-data:/mattermost/data
-      - mattermost-config:/mattermost/config
+      - gitlab-config:/etc/gitlab
+      - gitlab-logs:/var/log/gitlab
+      - gitlab-data:/var/opt/gitlab
+#  mattermost:
+#    image: mattermost/mattermost-prod-app:3.9.0
+#    environment:
+#      MATTERMOST_ENABLE_SSL: "true"
+#      DB_HOST: postgres
+#      MM_USERNAME:  mattermost
+#      MM_PASSWORD:  mattermost
+#      MM_DBNAME: mattermost
+#    ports:
+#      - 9999:80
+#    volumes:
+#      - mattermost-data:/mattermost/data
+#      - mattermost-config:/mattermost/config
 #  owncloud:
 #    image: owncloud
 #    volumes:
@@ -100,8 +99,8 @@ volumes:
     driver: local
   mattermost-data:
     driver: local
-  mattermost-config:
-    driver: local
+#  mattermost-config:
+#    driver: local
 #  owncloud-data:
 #    driver: local
 #  owncloud-config:
