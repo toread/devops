@@ -195,7 +195,7 @@
 ###! **Be careful not to break the indentation in the ldap_servers block. It is
 ###!   in yaml format and the spaces must be retained. Using tabs will not work.**
 
-# gitlab_rails['ldap_enabled'] = false
+ gitlab_rails['ldap_enabled'] = true
 
 ###! **remember to close this block with 'EOS' below**
 # gitlab_rails['ldap_servers'] = YAML.load <<-'EOS'
