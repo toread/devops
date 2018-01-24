@@ -73,6 +73,10 @@ services:
     ports:
     - "6443:443"
 volumes:
+  ldap-config:
+    driver: local
+  ldap-database:
+    driver: local
   gitlab-config:
     driver: local
   gitlab-logs:
