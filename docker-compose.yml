@@ -68,6 +68,7 @@ services:
       LDAP_DOMAIN: "devpt.ltd"
       LDAP_ADMIN_PASSWORD: "toread"
   phpldapadmin:
+    image: osixia/phpldapadmin
     environment:
       PHPLDAPADMIN_LDAP_HOSTS:  openldap
     ports:
