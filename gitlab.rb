@@ -422,7 +422,7 @@ gitlab_rails['redis_database'] = 0
 
 gitlab_rails['smtp_enable'] = true
 gitlab_rails['smtp_address'] = "smtp.devpt.ltd"
-gitlab_rails['smtp_port'] = 465
+gitlab_rails['smtp_port'] = 25
 gitlab_rails['smtp_user_name'] = "gitlab@devpt.ltd"
 gitlab_rails['smtp_password'] = "Qwer1234"
 gitlab_rails['smtp_tls'] = false;
