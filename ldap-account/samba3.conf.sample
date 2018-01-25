@@ -9,15 +9,15 @@ ServerURL: ldap://localhost:389
 
 # list of users who are allowed to use LDAP Account Manager
 # names have to be seperated by semicolons
-# e.g. admins: cn=admin,dc=yourdomain,dc=org;cn=root,dc=yourdomain,dc=org
-Admins: cn=Manager,dc=my-domain,dc=com
+# e.g. admins: cn=admin,dc=devpt,dc=ltd;cn=root,dc=yourdomain,dc=org
+Admins: cn=Manager,dc=devpt,dc=ltd
 
 # password to change these preferences via webfrontend (default: lam)
-Passwd: lam
+Passwd: toread
 
-# suffix of tree view
-# e.g. dc=yourdomain,dc=org
-treesuffix: dc=yourdomain,dc=org
+# suffix of tree view devpt.ltd
+# e.g. dc=devpt,dc=ltd
+treesuffix: dc=devpt,dc=ltd
 
 # default language (a line from config/language)
 defaultLanguage: en_GB.utf8
