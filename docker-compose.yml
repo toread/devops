@@ -70,7 +70,7 @@ services:
   ldap-account-manager:
     image: jkpark/docker-ldap-account-manager
     volumes:
-    - ldap-account-config:/var/lib/ldap-account-manager/config
+    - ldap-account-config: /config
     ports:
     - "20080:80"
 volumes:
